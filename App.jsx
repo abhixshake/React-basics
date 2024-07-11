@@ -5,41 +5,22 @@ import './App.css'
 import View from './components/View'
 import Records from './components/Records'
 import Add from './components/Add'
+import { Route, Routes } from 'react-router-dom'
 
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    // <>
-    //   <div>
-    //     <a href="https://vitejs.dev" target="_blank">
-    //       <img src={viteLogo} className="logo" alt="Vite logo" />
-    //     </a>
-    //     <a href="https://react.dev" target="_blank">
-    //       <img src={reactLogo} className="logo react" alt="React logo" />
-    //     </a>
-    //   </div>
-    //   <h1>Vite + React</h1>
-    //   <div className="card">
-    //     <button onClick={() => setCount((count) => count + 1)}>
-    //       count is {count}
-    //     </button>
-    //     <p>
-    //       Edit <code>src/App.jsx</code> and save to test HMR
-    //     </p>
-    //   </div>
-    //   <p className="read-the-docs">
-    //     Click on the Vite and React logos to learn more
-    //   </p>
-    // </>
+    
     <>
       <h1>BCCI</h1>
       <h2 position="fixed" sx={{top:'auto' ,bottom:500,width:100,minHeight:500}} >Stats</h2>
       <View/>
-      <Records/>
-      <Add/>
-   
+      <Routes>
+        <Route path='/' element={<Records/>}></Route>
+        <Route path='/add' element={<Add person={{fname:"M",middlename:"S",lastname:"Dhoni"}}/>}></Route>
+      </Routes>
     </>
   )
 }

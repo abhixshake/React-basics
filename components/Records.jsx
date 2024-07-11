@@ -12,11 +12,11 @@ function createData(name, calories, fat, carbs, protein) {
 }
 
 const rows = [
-  createData('Virat', 18, 47, 54, 51),
-  createData('Rohit', 45, 45, 49, 50),
-  createData('AB', 17, 40, 41, 48),
-  createData('Samson', 33, 30, 40, 40),
-  createData('Gambhir', 16, 35, 45, 48),
+  createData('Steyn', 300, 260, 700, 290),
+  createData('Malinga', 237, 400, 370, 430),
+  createData('Starc', 262, 160, 240, 600),
+  createData('Muralitharan', 305, 370, 670, 430),
+  createData('Sreeshanth', 356, 160, 490, 390),
 ];
 
 const Records = () => {
@@ -26,11 +26,11 @@ const Records = () => {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Name</TableCell>
-            <TableCell align="right">Number</TableCell>
-            <TableCell align="right">Test Avg</TableCell>
-            <TableCell align="right">ODI Avg</TableCell>
-            <TableCell align="right">T20 Avg</TableCell>
+            <TableCell>Bowlers</TableCell>
+            <TableCell align="right">ODI</TableCell>
+            <TableCell align="right">TEST</TableCell>
+            <TableCell align="right">T20</TableCell>
+            <TableCell align="right">DOMESTIC</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
